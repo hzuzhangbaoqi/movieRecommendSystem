@@ -1,0 +1,89 @@
+wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel62-3.4.3.tgz
+
+touch /usr/local/mongodb/data/logs/ mongodb.log
+
+touch /usr/local/mongodb/data/mongodb.conf
+
+wget http://download.redis.io/releases/redis-4.0.2.tar.gz
+
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.2.tar.gz
+
+wget https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.7.tgz
+
+wget http://mirror.bit.edu.cn/apache/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz
+
+wget http://www.apache.org/dyn/closer.lua/flume/1.8.0/apache-flume-1.8.0-bin.tar.gz
+
+wget http://mirrors.tuna.tsinghua.edu.cn/apache/kafka/0.10.2.1/kafka_2.11-0.10.2.1.tgz
+
+/usr/product/soft/jdk1.8.0_191
+
+/usr/product/soft/zookeeper-3.4.10/data
+
+export JAVA_HOME=/usr/product/soft/jdk1.8.0_191
+export CLASSPATH=$:CLASSPATH:$JAVA_HOME/lib/
+export PATH=$PATH:$JAVA_HOME/bin
+
+
+/usr/product/soft/elasticsearch-5.6.2/logs
+
+/usr/product/soft/elasticsearch-5.6.2/data
+
+#端口号 port = 27017 
+#数据目录 
+dbpath = /usr/local/mongodb/data/db 
+#日志目录 
+logpath = /usr/local/mongodb/data/logs/mongodb.log 
+#设置后台运行 
+fork = true 
+#日志输出方式 
+logappend = true 
+#开启认证 
+#auth = true
+
+logfile /var/log/redis/redis.log
+
+
+------------------------------------------------------------------------------------------------------------
+Movies 数据集
+[mid]1
+
+[name]Toy Story (1995)
+
+[descri]
+
+[timelong]81 minutes
+
+[shoot]March 20, 2001
+
+[issue]1995
+
+[language]English 
+
+[genres]Adventure|Animation|Children|Comedy|Fantasy
+
+[director]Tom Hanks|Tim Allen|Don Rickles|Jim Varney|Wallace Shawn|John Ratzenberger|Annie Potts|John Morris|Erik von Detten|Laurie Metcalf|R. Lee Ermey|Sarah Freeman|Penn Jillette|Tom Hanks|Tim Allen|Don Rickles|Jim Varney|Wallace Shawn
+
+[actors]John Lasseter 
+
+
+------------------------------------------------------------------------------------------------------------
+Ratings数据集
+[uid]1
+
+[mid]31
+
+[score]2.5
+
+[timestamp]1260759144
+
+
+------------------------------------------------------------------------------------------------------------
+Tag标签数据集
+[uid]15
+
+[mid]1955
+
+[tag]dentist
+
+[timestamp]1193435061
